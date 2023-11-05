@@ -1,0 +1,10 @@
+<div class="columns is-multiline">
+<h1 class="column is-12 has-text-centered">All Customers</h1>
+  <% @customers.each do |customer| %>
+    <%= render partial: 'customer', locals: { customer: customer } %>
+  <% end %>
+ </div>
+ <div>
+    <%= link_to 'Alphabetized View', customers_alphabetized_path %><br>
+    <%= link_to 'Missing Email View', customers_missing_email_path %>
+  </div>
